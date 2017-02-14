@@ -74,7 +74,7 @@ int traverse_binary_tree_recursive (void *root, void *(*get_left_node)(void *nod
 	return 0;
 }
 
-int _insert_value_into_binary_tree_recursive(void *node, void *insert_value, void *(*create_node)(void *value), void *(*get_left_node)(void *node), void *(*get_right_node)(void *node), void (*set_left_node)(void *node), void (*set_right_node)(void *node), int (*compare_value)(void *node_value, void *target_value), void *(*get_node_value)(void *node))
+int _insert_value_into_binary_tree_recursive(void *node, void *insert_value, void *(*create_node)(void *value), void *(*get_left_node)(void *node), void *(*get_right_node)(void *node), void (*set_left_node)(void *node, void *left_value), void (*set_right_node)(void *node, void *right_value), int (*compare_value)(void *node_value, void *target_value), void *(*get_node_value)(void *node))
 {
 	void *new_node, *left_node, *right_node;
 	void *current_value;
@@ -87,7 +87,7 @@ int _insert_value_into_binary_tree_recursive(void *node, void *insert_value, voi
 			set_left_node(node, new_node);
 			return 0;
 		}
-		else return _insert_value_into_binary_tree_recursive(left_node, insert_value, create_node, get_left_node, get_right_node, compare_value, create_node, get_node_value);
+		else return _insert_value_into_binary_tree_recursive(left_node, insert_value, create_node, get_left_node, get_right_node, set_left_node, set_right_node, compare_value, get_node_value);
 	}
 	else{
 		if ((right_node = get_right_node(node)) == NULL){
@@ -95,11 +95,11 @@ int _insert_value_into_binary_tree_recursive(void *node, void *insert_value, voi
 			set_right_node(node, new_node);
 			return 0;
 		}
-		else return _insert_value_into_binary_tree_recursive(right_node, insert_value, create_node, get_left_node, get_right_node, compare_value, get_node_value);
+		else return _insert_value_into_binary_tree_recursive(right_node, insert_value, create_node, get_left_node, get_right_node, set_left_node, set_right_node, compare_value, get_node_value);
 	}
 }
 
-int insert_value_into_binary_tree_recursive(void *node, void *insert_value, void *(*create_node)(void *value), void *(*get_left_node)(void *node), void *(*get_right_node)(void *node), int (*compare_value)(void *node_value, void *target_valu), void *(*get_node_value)(void *node))
+int insert_value_into_binary_tree_recursive(void *node, void *insert_value, void *(*create_node)(void *value), void *(*get_left_node)(void *node), void *(*get_right_node)(void *node), void (*set_left_node)(void *node, void *left_value), void (*set_right_node)(void *node, void *right_value), int (*compare_value)(void *node_value, void *target_valu), void *(*get_node_value)(void *node))
 {
 	void *new_node;
 	if (insert_value == NULL || create_node == NULL || get_left_node == NULL || get_right_node == NULL || compare_value == NULL || create_node == NULL) return -1;
@@ -107,5 +107,5 @@ int insert_value_into_binary_tree_recursive(void *node, void *insert_value, void
 		if((new_node = create_node(insert_value)) == NULL) return 1;
 		else return 0;
 		}
-	else return _insert_value_into_binary_tree_recursive(node, insert_value, create_node, get_left_node, get_right_node, compare_value, get_node_value);
+	else return _insert_value_into_binary_tree_recursive(node, insert_value, create_node, get_left_node, get_right_node, set_left_node, set_right_node, compare_value, get_node_value);
 }
