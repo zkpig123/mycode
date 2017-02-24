@@ -7,8 +7,8 @@ int _merge_sort_guard_incremental (int cards[], size_t card_num)
 	size_t mid = card_num / 2;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
-	_merge_sort_guard_incremental(cards, left_card_num);
-	_merge_sort_guard_incremental(cards + mid, right_card_num);
+	if (left_card_num > 1) _merge_sort_guard_incremental(cards, left_card_num);
+	if (right_card_num > 1) _merge_sort_guard_incremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -34,8 +34,8 @@ int _merge_sort_guard_decremental (int cards[], size_t card_num)
 	size_t mid = card_num / 2;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
-	_merge_sort_guard_decremental(cards, left_card_num);
-	_merge_sort_guard_decremental(cards + mid, right_card_num);
+	if (left_card_num > 1) _merge_sort_guard_decremental(cards, left_card_num);
+	if (right_card_num > 1) _merge_sort_guard_decremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -70,8 +70,8 @@ int _merge_sort_non_guard_incremental (int cards[], size_t card_num)
 	size_t mid = card_num / 2;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
-	_merge_sort_non_guard_incremental(cards, left_card_num);
-	_merge_sort_non_guard_incremental(cards + mid, right_card_num);
+	if (left_card_num > 1) _merge_sort_non_guard_incremental(cards, left_card_num);
+	if (right_card_num > 1) _merge_sort_non_guard_incremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -112,8 +112,8 @@ int _merge_sort_non_guard_decremental (int cards[], size_t card_num)
 	size_t mid = card_num / 2;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
-	_merge_sort_non_guard_decremental(cards, left_card_num);
-	_merge_sort_non_guard_decremental(cards + mid, right_card_num);
+	if (left_card_num > 1) _merge_sort_non_guard_decremental(cards, left_card_num);
+	if (right_card_num > 1) _merge_sort_non_guard_decremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;

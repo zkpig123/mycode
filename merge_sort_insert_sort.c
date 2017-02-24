@@ -8,9 +8,9 @@ int _merge_sort_guard_incremental (int cards[], size_t card_num)
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_incremental(cards, left_card_num);
-	else _insert_sort_incremental(cards, left_card_num);
+	else if (left_card_num > 1) _insert_sort_incremental(cards, left_card_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_incremental(cards + mid, right_card_num);
-	else _insert_sort_incremental(cards + mid, right_card_num);
+	else if (right_card_num > 1) _insert_sort_incremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -37,9 +37,9 @@ int _merge_sort_guard_decremental (int cards[], size_t card_num)
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_decremental(cards, left_card_num);
-	else _insert_sort_decremental(cards, left_card_num);
+	else if (left_card_num > 1) _insert_sort_decremental(cards, left_card_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_decremental(cards + mid, right_card_num);
-	else _insert_sort_decremental(cards + mid, right_card_num);
+	else if (right_card_num > 1) _insert_sort_decremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -64,10 +64,10 @@ int merge_sort_guard (int cards[], size_t card_num, int order)
 	else if (card_num == 1) return 0;
 	if (order > 0){
 		if (card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_incremental(cards, card_num);
-		else _insert_sort_incremental(cards, card_num);
+		_insert_sort_incremental(cards, card_num);
 	}else{
 		if (card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_guard_decremental(cards, card_num);
-		else _insert_sort_decremental(cards, card_num);
+		_insert_sort_decremental(cards, card_num);
 	}
 	return 0;
 }
@@ -80,9 +80,9 @@ int _merge_sort_non_guard_incremental (int cards[], size_t card_num)
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_non_guard_incremental(cards, left_card_num);
-	else _insert_sort_incremental(cards, left_card_num);
+	else if (left_card_num > 1) _insert_sort_incremental(cards, left_card_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_non_guard_incremental(cards + mid, right_card_num);
-	else _insert_sort_incremental(cards + mid, right_card_num);
+	else if (right_card_num > 1) _insert_sort_incremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;
@@ -124,9 +124,9 @@ int _merge_sort_non_guard_decremental (int cards[], size_t card_num)
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_non_guard_decremental(cards, left_card_num);
-	else _insert_sort_decremental(cards, left_card_num);
+	else if (left_card_num > 1) _insert_sort_decremental(cards, left_card_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_non_guard_decremental(cards + mid, right_card_num);
-	else _insert_sort_decremental(cards + mid, right_card_num);
+	else if (right_card_num > 1) _insert_sort_decremental(cards + mid, right_card_num);
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc(left_card_num + 1)) == NULL || (right_cards = malloc(right_card_num + 1)) == NULL) return 1;

@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 void _insert_sort_incremental (int cards[], size_t card_num)
 {
 	for (size_t i = 1; i <= card_num - 1; i++){
