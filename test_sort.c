@@ -24,11 +24,11 @@ int main (void)
 	funcs[2] = merge_sort_insert_sort_guard;
 	funcs[3] = merge_sort_insert_sort_non_guard;
 	funcs[4] = quick_sort_from_side;
-	funcs[5] = insert_sort;
-	funcs[6] = insert_quick_sort;
+	funcs[5] = insert_quick_sort;
+	funcs[6] = insert_sort;
 
 	int last_card_num;
-	for (card_num = 1, last_card_num = 0; card_num < 1000000/*MAX_CARD_NUM*/; ){
+	for (card_num = 1, last_card_num = 0; card_num < MAX_CARD_NUM; ){
 		if ((cards = realloc(cards, card_num * sizeof(int))) == NULL || (orig_cards = realloc(orig_cards, card_num * sizeof(int))) == NULL){
 			fprintf(stderr, "malloc for card_num:%zd failed.\n", card_num);
 			exit(1);
@@ -54,9 +54,9 @@ void print_sort_fatal_err_msg(int cur_func)
 	else if (cur_func == 1) printf("err: merge sort guard\n");
 	else if (cur_func == 2) printf("err: merge sort insert sort guard\n");
 	else if (cur_func == 3) printf("err: merge sort insert sort non guard\n");
-	else if (cur_func == 5) printf("err: insert sort\n");
+	else if (cur_func == 6) printf("err: insert sort\n");
 	else if (cur_func == 4) printf("err: quick sort\n");
-	else if (cur_func == 6) printf("err: insert quick sort\n");
+	else if (cur_func == 5) printf("err: insert quick sort\n");
 }
 
 void print_success_msg (int cur_func, double elapsed)
@@ -65,9 +65,9 @@ void print_success_msg (int cur_func, double elapsed)
 	else if (cur_func == 1) printf("success: merge sort guard, time used:%f", elapsed);
 	else if (cur_func == 2) printf("success: merge sort insert sort guard, time used:%f", elapsed);
 	else if (cur_func == 3) printf("success: merge sort insert sort non guard, time used:%f", elapsed);
-	else if (cur_func == 5) printf("success: insert sort, time used:%f", elapsed);
+	else if (cur_func == 6) printf("success: insert sort, time used:%f", elapsed);
 	else if (cur_func == 4) printf("success: quick sort, time used:%f", elapsed);
-	else if (cur_func == 6) printf("success: insert quick sort, time used:%f", elapsed);
+	else if (cur_func == 5) printf("success: insert quick sort, time used:%f", elapsed);
 }
 
 void print_sort_func_fail_msg (int cur_func)
@@ -76,9 +76,9 @@ void print_sort_func_fail_msg (int cur_func)
 	else if (cur_func == 1) printf("failed: merge sort guard.\n");
 	else if (cur_func == 2) printf("failed: merge sort insert sort guard.\n");
 	else if (cur_func == 3) printf("failed: merge sort insert sort non guard.\n");
-	else if (cur_func == 5) printf("failed: insert sort.\n");
+	else if (cur_func == 6) printf("failed: insert sort.\n");
 	else if (cur_func == 4) printf("failed: quick sort.\n");
-	else if (cur_func == 6) printf("failed: insert quick sort.\n");
+	else if (cur_func == 5) printf("failed: insert quick sort.\n");
 }
 
 void print_sort_func_return_err (int cur_func, int ret)
@@ -87,9 +87,9 @@ void print_sort_func_return_err (int cur_func, int ret)
 	else if (cur_func == 1) printf("error: merge sort guard return, ret:%d\n", ret);
 	else if (cur_func == 2) printf("error: merge sort insert sort guard return, ret:%d\n", ret);
 	else if (cur_func == 3) printf("error: merge sort insert sort non guard return, ret:%d\n", ret);
-	else if (cur_func == 5) printf("error: insert sort return, ret:%d\n", ret);
+	else if (cur_func == 6) printf("error: insert sort return, ret:%d\n", ret);
 	else if (cur_func == 4) printf("error: quick sort return, ret:%d\n", ret);
-	else if (cur_func == 6) printf("error: insert quick sort return, ret:%d\n", ret);
+	else if (cur_func == 5) printf("error: insert quick sort return, ret:%d\n", ret);
 }
 
 int get_process_runtime_ticks (clock_t *ticks)
@@ -170,7 +170,7 @@ void sort_cards (int cards[], int orig_cards[], size_t card_num, int(*func)(int[
 
 void various_sort_cards (int cards[], int orig_cards[], size_t card_num, int(*funcs[7])(int[], size_t, int))
 {
-	for (int cur_func = 5; cur_func < 7; cur_func++){
+	for (int cur_func = 0; cur_func < 6; cur_func++){
 		sort_cards(cards, orig_cards, card_num, funcs[cur_func], cur_func);
 	}
 }
