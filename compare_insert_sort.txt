@@ -1,0 +1,665 @@
+card_num:1
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:2
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:3
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:4
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:5
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:6
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:7
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:8
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:9
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:10
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:11
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:12
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:13
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:14
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:15
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:16
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:17
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:18
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:19
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:20
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:21
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:22
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:23
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:24
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:25
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:26
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:27
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:28
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:29
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:30
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:31
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:32
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:33
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:34
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:35
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:36
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:37
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:38
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:39
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:40
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:41
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:42
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:43
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:44
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:45
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:46
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:47
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:48
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:49
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:50
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:51
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:52
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:53
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:54
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:55
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:56
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:57
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:58
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:59
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:60
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:61
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:62
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:63
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:64
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:65
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:66
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:67
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:68
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:69
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:70
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:71
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:72
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:73
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:74
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:75
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:76
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:77
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:78
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:79
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:80
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:81
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:82
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:83
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:84
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:85
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:86
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:87
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:88
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:89
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:90
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:91
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:92
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:93
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:94
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:95
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:96
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:97
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:98
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:99
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:100
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:101
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:102
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:103
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:104
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:105
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:106
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:107
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:108
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:109
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:110
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:111
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:112
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:113
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:114
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:115
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:116
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:117
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:118
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:119
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:120
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:121
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:122
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:123
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:124
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:125
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:126
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:127
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:128
+success: insert sort, time used:0.000000 usage: resident:88 KB
+success: insert quick sort, time used:0.000000 usage: resident:88 KB
+
+
+card_num:640
+success: insert sort, time used:0.000000 usage: resident:92 KB
+success: insert quick sort, time used:0.000000 usage: resident:92 KB
+
+
+card_num:3200
+success: insert sort, time used:0.000000 usage: resident:120 KB
+success: insert quick sort, time used:0.000000 usage: resident:120 KB
+
+
+card_num:16000
+success: insert sort, time used:0.110000 usage: resident:244 KB
+success: insert quick sort, time used:0.000000 usage: resident:244 KB
+
+
+card_num:80000
+success: insert sort, time used:2.840000 usage: resident:1.207 MB
+success: insert quick sort, time used:0.140000 usage: resident:1.328 MB
+
+
+card_num:400000
+success: insert sort, time used:71.370000 usage: resident:3.645 MB
+success: insert quick sort, time used:4.250000 usage: resident:3.766 MB
+
+

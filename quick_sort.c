@@ -1,22 +1,9 @@
 #include "quick_sort.h"
 
-void swap_int (int *n1, int *n2)
-{
-    if (n1 == n2) return;
-	*n1 = *n1 ^ *n2;
-	*n2 = *n1 ^ *n2;
-	*n1 = *n1 ^ *n2;
-}
-
 int _quick_sort_from_side_incremental (int cards[], size_t card_num)
 {
 	size_t base;
 	if (card_num > 5){
-		/*struct timespec ts;
-		unsigned int rand;
-		if (clock_gettime(CLOCK_MONOTONIC, &ts) == -1) return 1;
-		rand = ts.tv_sec * ts.tv_nsec + ts.tv_sec + ts.tv_nsec;
-		srandom((unsigned int)rand);*/
 		base = random() % card_num;
 	}
 	else base = 0;
@@ -81,23 +68,34 @@ int _quick_sort_from_side_decremental (int cards[], size_t card_num)
 	return 0;
 }
 
+int init_random (void)
+{
+	struct timespec ts;
+	unsigned int rand;
+	if (clock_gettime(CLOCK_MONOTONIC, &ts) == -1) return 1;
+	rand = ts.tv_sec * ts.tv_nsec + ts.tv_sec + ts.tv_nsec;
+	srandom((unsigned int)rand);
+	return 0;
+}
+
 int quick_sort_from_side (int cards[], size_t card_num, int order)
 {
 	if (cards == NULL || card_num == 0 || order == 0) return 1;
 	if (card_num == 1) return 0;
+	if (init_random()) return 2; //init_random(inner:clock_gettime) failed.
 	if (order > 0){
 		if (card_num == 2){
 			if (cards[0] > cards[1]) swap_int(&cards[0], &cards[1]);
 		}else if (card_num <= K) _insert_sort_incremental(cards, card_num);
 		else{
-			if (_quick_sort_from_side_incremental(cards, card_num)) return 2;
+			if (_quick_sort_from_side_incremental(cards, card_num)) return 3;
 		}
 	}else{
 		if (card_num == 2){
 			if (cards[0] < cards[1]) swap_int(&cards[0], &cards[1]);
 		}else if (card_num <= K) _insert_sort_decremental(cards, card_num);
 		else{
-			if (_quick_sort_from_side_decremental(cards, card_num)) return 3;
+			if (_quick_sort_from_side_decremental(cards, card_num)) return 4;
 		}
 	}
 	return 0;

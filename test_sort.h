@@ -2,6 +2,7 @@
 #define _TEST_SORT_H
 
 #include "merge_sort.h"
+#include "insert_quick_sort.h"
 #include "merge_sort_insert_sort.h"
 #include "quick_sort.h"
 #include "assist.h"

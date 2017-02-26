@@ -29,6 +29,7 @@
 void err (const char *s);
 void p_err (const char *s);
 void swap_byte (unsigned char *c1, unsigned char *c2);
+void swap_int (int *n1, int *n2);
 int network_to_host (int bytes);
 int vm (void *pos, int bytes);
 #endif

@@ -6,6 +6,14 @@ void err (const char *s)
 	exit (1);
 }
 
+void swap_int (int *n1, int *n2)
+{
+	if (n1 == n2) return;
+	*n1 = *n1 ^ *n2;
+	*n2 = *n1 ^ *n2;
+	*n1 = *n1 ^ *n2;
+}
+
 void p_err (const char *s)
 {
 	perror(s);
