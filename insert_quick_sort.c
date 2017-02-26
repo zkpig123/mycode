@@ -3,6 +3,7 @@
 
 void _insert_sort_decremental (int cards[], size_t card_num)
 {
+	if (card_num <= 1) return;
 	for (size_t i = 1; i <= card_num - 1; i++){
 		int *left, *right, *mid, *pos;
 		for (left = cards, right = cards + i - 1; ; ){
@@ -38,6 +39,7 @@ void _insert_sort_decremental (int cards[], size_t card_num)
 
 void _insert_sort_incremental (int cards[], size_t card_num)
 {
+	if (card_num <= 1) return;
 	for (size_t i = 1; i <= card_num - 1; i++){
 		int *left, *right, *mid, *pos;
 		for (left = cards, right = cards + i - 1; ; ){
