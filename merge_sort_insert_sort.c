@@ -7,13 +7,14 @@ int _merge_sort_insert_sort_non_guard_incremental_get_reverse_num (int cards[], 
 	size_t right_card_num;
 	size_t mid = card_num / 2;
 	size_t left_reverse_num, right_reverse_num;
+	left_reverse_num = right_reverse_num = 0;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_non_guard_incremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	else if (left_card_num > 1) _insert_sort_incremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_non_guard_incremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
 	else if (right_card_num > 1) _insert_sort_incremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
-	reverse_num += left_reverse_num + right_reverse_num;
+	*reverse_num += left_reverse_num + right_reverse_num;
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc((left_card_num + 1) * sizeof(int))) == NULL || (right_cards = malloc((right_card_num + 1) * sizeof(int))) == NULL) return 1;
@@ -63,13 +64,14 @@ int _merge_sort_insert_sort_non_guard_decremental_get_reverse_num (int cards[], 
 	size_t right_card_num;
 	size_t mid = card_num / 2;
 	size_t left_reverse_num, right_reverse_num;
+	left_reverse_num = right_reverse_num = 0;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_non_guard_decremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	else if (left_card_num > 1) _insert_sort_decremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_non_guard_decremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
 	else if (right_card_num > 1) _insert_sort_decremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
-	reverse_num += left_reverse_num + right_reverse_num;
+	*reverse_num += left_reverse_num + right_reverse_num;
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc((left_card_num + 1) * sizeof(int))) == NULL || (right_cards = malloc((right_card_num + 1) * sizeof(int))) == NULL) return 1;
@@ -113,8 +115,9 @@ int _merge_sort_insert_sort_non_guard_decremental_get_reverse_num (int cards[], 
 
 int merge_sort_insert_sort_non_guard_get_reverse_num (int cards[], size_t card_num, int order, size_t *reverse_num)
 {
-	if (cards == NULL || card_num <= 0 || order == 0) return 1;
-	else if (card_num == 1) return 0;
+	if (cards == NULL || card_num <= 0 || order == 0 || reverse_num == NULL) return 1;
+	*reverse_num = 0;
+	if (card_num == 1) return 0;
 	if (order > 0){
 		if (card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_non_guard_incremental_get_reverse_num(cards, card_num, reverse_num);
 		else _insert_sort_incremental_get_reverse_num(cards, card_num, reverse_num);
@@ -133,13 +136,14 @@ int _merge_sort_insert_sort_guard_incremental_get_reverse_num (int cards[], size
 	size_t right_card_num;
 	size_t mid = card_num / 2;
 	size_t left_reverse_num, right_reverse_num;
+	left_reverse_num = right_reverse_num = 0;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_guard_incremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
-	else if (left_card_num > 1) _insert_sort_incremental_get_reverse_num(cards, left_card_num, &right_reverse_num);
+	else if (left_card_num > 1) _insert_sort_incremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_guard_incremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
 	else if (right_card_num > 1) _insert_sort_incremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
-	reverse_num += left_reverse_num + right_reverse_num;
+	*reverse_num += left_reverse_num + right_reverse_num;
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc((left_card_num + 1) * sizeof(int))) == NULL || (right_cards = malloc((right_card_num + 1) * sizeof(int))) == NULL) return 1;
@@ -178,13 +182,14 @@ int _merge_sort_insert_sort_guard_decremental_get_reverse_num (int cards[], size
 	size_t right_card_num;
 	size_t mid = card_num / 2;
 	size_t left_reverse_num, right_reverse_num;
+	left_reverse_num = right_reverse_num = 0;
 	left_card_num = mid;
 	right_card_num = card_num - left_card_num;
 	if (left_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_guard_decremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
-	else if (left_card_num > 1) _insert_sort_decremental_get_reverse_num(cards, left_card_num, &right_reverse_num);
+	else if (left_card_num > 1) _insert_sort_decremental_get_reverse_num(cards, left_card_num, &left_reverse_num);
 	if (right_card_num >= ITEM_NUM_LESS_THAN_THIS_USE_INSERT_SORT) _merge_sort_insert_sort_guard_decremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
 	else if (right_card_num > 1) _insert_sort_decremental_get_reverse_num(cards + mid, right_card_num, &right_reverse_num);
-	reverse_num += left_reverse_num + right_reverse_num;
+	*reverse_num += left_reverse_num + right_reverse_num;
 
 	int *left_cards, *right_cards;
 	if ((left_cards = malloc((left_card_num + 1) * sizeof(int))) == NULL || (right_cards = malloc((right_card_num + 1) * sizeof(int))) == NULL) return 1;
@@ -218,8 +223,9 @@ int _merge_sort_insert_sort_guard_decremental_get_reverse_num (int cards[], size
 
 int merge_sort_insert_sort_guard_get_reverse_num (int cards[], size_t card_num, int order, size_t *reverse_num)
 {
-	if (cards == NULL || card_num <= 0 || order == 0) return 1;
-	else if (card_num == 1) return 0;
+	if (cards == NULL || card_num <= 0 || order == 0 || reverse_num == NULL) return 1;
+	*reverse_num = 0;
+	if (card_num == 1) return 0;
 	if (order > 0) _merge_sort_insert_sort_guard_incremental_get_reverse_num(cards, card_num, reverse_num);
 	else _merge_sort_insert_sort_guard_decremental_get_reverse_num(cards, card_num, reverse_num);
 	return 0;

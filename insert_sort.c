@@ -24,12 +24,14 @@ void _insert_sort_decremental_get_reverse_num (int cards[], size_t card_num, siz
 			cards[j + 1] = cards[j];
 		}
 		cards[j + 1] = cur;
+		*reverse_num += i - j - 1;
 	}
 }
 
 int insert_sort_get_reverse_num (int cards[], size_t card_num, int sort_order, size_t *reverse_num)
 {
-	if (cards == NULL ||card_num <= 0 || sort_order == 0) return -1;
+	if (cards == NULL ||card_num <= 0 || sort_order == 0 || reverse_num == NULL) return -1;
+	*reverse_num = 0;
 	if (card_num == 1) return 0;
 	if (sort_order > 0) _insert_sort_incremental_get_reverse_num(cards, card_num, reverse_num);
 	else _insert_sort_decremental_get_reverse_num(cards, card_num, reverse_num);
