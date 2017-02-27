@@ -33,7 +33,7 @@ int _merge_sort_insert_sort_non_guard_incremental_get_reverse_num (int cards[], 
 			if (right <= right_most){
 				if (*left < *right){
 					cards[cur] = *left++;
-					if (cur >= left_card_num) *reverse_num += cur + 1 - left_card_num;
+					if (cur >= left_card_num) *reverse_num += cur /*+ 1*/ - left_card_num;
 				}
 				else{
 					cards[cur] = *right++;
@@ -165,7 +165,7 @@ int _merge_sort_insert_sort_guard_incremental_get_reverse_num (int cards[], size
 	for (; cur < card_num; cur++){
 		if (*left < *right){
 			cards[cur] = *left++;
-			*reverse_num += cur + 1 - left_card_num;
+			*reverse_num += cur /*+ 1*/ - left_card_num;
 		}
 		else cards[cur] = *right++;
 	}

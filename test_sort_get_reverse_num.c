@@ -27,7 +27,7 @@ int main (void)
 	funcs[4] = insert_sort_get_reverse_num;
 
 	int last_card_num;
-	for (card_num = 1, last_card_num = 0; card_num < 100/*MAX_CARD_NUM*/; ){
+	for (card_num = 2, last_card_num = 0; card_num < 100/*MAX_CARD_NUM*/; ){
 		if ((cards = realloc(cards, card_num * sizeof(int))) == NULL || (orig_cards = realloc(orig_cards, card_num * sizeof(int))) == NULL){
 			fprintf(stderr, "malloc for card_num:%zd failed.\n", card_num);
 			exit(1);
@@ -35,7 +35,7 @@ int main (void)
 		for (long int i = last_card_num; i < card_num; i++) orig_cards[i] = i;
 		memcpy(cards, orig_cards, card_num * sizeof(int));
 		if (randomize_cards(cards, card_num)) err("randomize_cards func failed.");
-		//print_randomize_cards(cards, card_num);
+		print_randomize_cards(cards, card_num);
 		//print_original_cards(orig_cards, card_num);
 		printf("card_num:%zd\n", card_num);
 		fflush(stdout);
@@ -117,7 +117,6 @@ void process_result_of_child (int status, int cards[], size_t card_num, int cur_
 	if (WIFSIGNALED(status)){
 		fprintf(stderr, "signal num:%d\n", WTERMSIG(status));
 		print_sort_fatal_err_msg(cur_func);
-		getchar();
 	}
 }
 
