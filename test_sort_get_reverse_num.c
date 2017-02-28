@@ -26,10 +26,25 @@ int main (void)
 	funcs[3] = merge_sort_insert_sort_non_guard_get_reverse_num;
 	funcs[4] = insert_sort_get_reverse_num;
 
+	pid_t pid;
+	fflush(stdout);
+	fflush(stderr);
+	if ((pid = fork()) == -1) p_err("fork failed.");
+	else if (pid){ //parent
+		int status;
+		if (waitpid(pid, &status, 0) == -1) dprintf(STDERR_FILENO, "wait failed.");
+		if (WIFSIGNALED(status)){
+			dprintf(STDERR_FILENO, "process killed by signal, signal num:%d\n", WTERMSIG(status));
+		}
+		_Exit(0); //strange, when using exit then parent output a duplication of child!!! why?
+	}
+		
+
 	int last_card_num;
-	for (card_num = 1000, last_card_num = 0; card_num < 90000000/*MAX_CARD_NUM*/; ){
+	for (card_num = 1000, last_card_num = 0; card_num < MAX_CARD_NUM; ){
 		if ((cards = realloc(cards, card_num * sizeof(int))) == NULL || (orig_cards = realloc(orig_cards, card_num * sizeof(int))) == NULL){
-			fprintf(stderr, "malloc for card_num:%zd failed.\n", card_num);
+			fprintf(stderr, "malloc for card_num:%zu failed.\n", card_num);
+			fflush(stderr);
 			exit(1);
 		}
 		for (long int i = last_card_num; i < card_num; i++) orig_cards[i] = i;
@@ -37,13 +52,14 @@ int main (void)
 		if (randomize_cards(cards, card_num)) err("randomize_cards func failed.");
 		//print_randomize_cards(cards, card_num);
 		//print_original_cards(orig_cards, card_num);
-		printf("card_num:%zd\n", card_num);
+		printf("card_num:%zu\n", card_num);
 		fflush(stdout);
 		various_sort_cards (cards, orig_cards, card_num, funcs, FUNC_NUM - 1);
 		last_card_num = card_num;
 		if (card_num < 128) card_num++;
 		else card_num *= 5;
 		printf("\n\n");
+		fflush(stdout);
 	}
 }
 
@@ -56,13 +72,22 @@ void print_sort_fatal_err_msg(int cur_func)
 	else if (cur_func == 4) printf("err: insert sort\n");
 }
 
+void print_success_msg_fd (int cur_func, double elapsed, size_t reverse_num)
+{
+	if (cur_func == 0) dprintf(STDOUT_FILENO, "success: merge sort non guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 1) dprintf(STDOUT_FILENO, "success: merge sort guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 2) dprintf(STDOUT_FILENO, "success: merge sort insert sort guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 3) dprintf(STDOUT_FILENO, "success: merge sort insert sort non guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 4) dprintf(STDOUT_FILENO, "success: insert sort, reverse num:%zu, time used:%f", reverse_num, elapsed);
+}
+
 void print_success_msg (int cur_func, double elapsed, size_t reverse_num)
 {
-	if (cur_func == 0) printf("success: merge sort non guard, reverse num:%zd, time used:%f", reverse_num, elapsed);
-	else if (cur_func == 1) printf("success: merge sort guard, reverse num:%zd, time used:%f", reverse_num, elapsed);
-	else if (cur_func == 2) printf("success: merge sort insert sort guard, reverse num:%zd, time used:%f", reverse_num, elapsed);
-	else if (cur_func == 3) printf("success: merge sort insert sort non guard, reverse num:%zd, time used:%f", reverse_num, elapsed);
-	else if (cur_func == 4) printf("success: insert sort, reverse num:%zd, time used:%f", reverse_num, elapsed);
+	if (cur_func == 0) printf("success: merge sort non guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 1) printf("success: merge sort guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 2) printf("success: merge sort insert sort guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 3) printf("success: merge sort insert sort non guard, reverse num:%zu, time used:%f", reverse_num, elapsed);
+	else if (cur_func == 4) printf("success: insert sort, reverse num:%zu, time used:%f", reverse_num, elapsed);
 }
 
 void print_sort_func_fail_msg (int cur_func)
@@ -116,15 +141,24 @@ void process_result_of_child (int status, int cards[], size_t card_num, int cur_
 {
 	if (WIFSIGNALED(status)){
 		fprintf(stderr, "signal num:%d\n", WTERMSIG(status));
+		fflush(stderr);
 		print_sort_fatal_err_msg(cur_func);
+		fflush(stdout);
 	}
 }
 
 void sort_cards (int cards[], int orig_cards[], size_t card_num, int(*func)(int[], size_t, int, size_t*), int cur_func)
 {
 	pid_t pid;
+	fflush(stdout);
+	fflush(stderr);
 	if ((pid = fork()) == -1) p_err("fork failed.");
-	if (pid == 0){
+	if (pid){//parent
+		int status;
+		if (waitpid(pid, &status, 0) == -1) p_err("wait failed.");
+		process_result_of_child (status, cards, card_num, cur_func);
+	}
+	else{
 		int ret;
 		double elapsed;
 		clock_t before_sort_ticks, after_sort_ticks;
@@ -132,23 +166,24 @@ void sort_cards (int cards[], int orig_cards[], size_t card_num, int(*func)(int[
 		if (get_process_runtime_ticks (&before_sort_ticks)) err("times func failed.");
 		ret = (*func)(cards, card_num, 1, &reverse_num);
 		if (get_process_runtime_ticks (&after_sort_ticks)) err("times func failed.");
-		if (ret) print_sort_func_return_err(cur_func, ret);
+		if (ret){
+			print_sort_func_return_err(cur_func, ret);
+			fflush(stdout);
+		}
 		else{
 			if (check_sort_result (cards, orig_cards, card_num) == 0){
 				elapsed = 1.0 * (after_sort_ticks - before_sort_ticks) / clock_ticks;
 				print_success_msg(cur_func, elapsed, reverse_num);
 				if (print_resource_usage()) p_err("getrusage failed.");
+				fflush(stdout);
 			}
 			else{
 				print_sort_func_fail_msg (cur_func);
 				print_cards(cards, card_num);
+				fflush(stdout);
 			}
 		}
 		exit(ret);
-	}else{//parent
-		int status;
-		if (waitpid(pid, &status, 0) == -1) p_err("wait failed.");
-		process_result_of_child (status, cards, card_num, cur_func);
 	}
 }
 
@@ -211,9 +246,32 @@ int print_resource_usage(void)
 {
 	struct rusage res;
 	if (getrusage(RUSAGE_SELF, &res) == -1) return 1;
-	if (res.ru_maxrss <= 1024) printf(" usage: resident:%ld KB\n", res.ru_maxrss);
-	else if (res.ru_maxrss <= 1024 * 1024L)printf(" usage: resident:%.3f MB\n", res.ru_maxrss / 1024.0);
-	else printf(" usage: resident:%.3f GB\n", res.ru_maxrss / (1024.0 * 1024));
+	if (res.ru_maxrss <= 1024){
+		printf(" usage: resident:%ld KB\n", res.ru_maxrss);
+	}
+	else if (res.ru_maxrss <= 1024 * 1024L){
+		printf(" usage: resident:%.3f MB\n", res.ru_maxrss / 1024.0);
+	}
+	else{
+		printf(" usage: resident:%.3f GB\n", res.ru_maxrss / (1024.0 * 1024));
+	}
+
+	return 0;
+}
+
+int print_resource_usage_fd(void)
+{
+	struct rusage res;
+	if (getrusage(RUSAGE_SELF, &res) == -1) return 1;
+	if (res.ru_maxrss <= 1024){
+		dprintf(STDOUT_FILENO, " usage: resident:%ld KB\n", res.ru_maxrss);
+	}
+	else if (res.ru_maxrss <= 1024 * 1024L){
+		dprintf(STDOUT_FILENO, " usage: resident:%.3f MB\n", res.ru_maxrss / 1024.0);
+	}
+	else{
+		dprintf(STDOUT_FILENO, " usage: resident:%.3f GB\n", res.ru_maxrss / (1024.0 * 1024));
+	}
 
 	return 0;
 }
