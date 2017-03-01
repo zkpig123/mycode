@@ -1,0 +1,64 @@
+card_num:1000
+success: merge sort non guard, reverse num:178073, time used:0.000000 usage: resident:96 KB
+success: merge sort guard, reverse num:178073, time used:0.000000 usage: resident:96 KB
+success: merge sort insert sort guard, reverse num:178073, time used:0.000000 usage: resident:96 KB
+success: merge sort insert sort non guard, reverse num:178073, time used:0.000000 usage: resident:96 KB
+
+
+card_num:5000
+success: merge sort non guard, reverse num:4499711, time used:0.000000 usage: resident:136 KB
+success: merge sort guard, reverse num:4499711, time used:0.000000 usage: resident:136 KB
+success: merge sort insert sort guard, reverse num:4499711, time used:0.000000 usage: resident:136 KB
+success: merge sort insert sort non guard, reverse num:4499711, time used:0.000000 usage: resident:136 KB
+
+
+card_num:25000
+success: merge sort non guard, reverse num:111604207, time used:0.000000 usage: resident:960 KB
+success: merge sort guard, reverse num:111604207, time used:0.000000 usage: resident:960 KB
+success: merge sort insert sort guard, reverse num:111604207, time used:0.000000 usage: resident:960 KB
+success: merge sort insert sort non guard, reverse num:111604207, time used:0.000000 usage: resident:960 KB
+
+
+card_num:125000
+success: merge sort non guard, reverse num:2762812467, time used:0.020000 usage: resident:1.953 MB
+success: merge sort guard, reverse num:2762812467, time used:0.020000 usage: resident:1.953 MB
+success: merge sort insert sort guard, reverse num:2762812467, time used:0.010000 usage: resident:1.953 MB
+success: merge sort insert sort non guard, reverse num:2762812467, time used:0.010000 usage: resident:1.953 MB
+
+
+card_num:625000
+success: merge sort non guard, reverse num:69307197805, time used:0.100000 usage: resident:7.828 MB
+success: merge sort guard, reverse num:69307197805, time used:0.100000 usage: resident:7.828 MB
+success: merge sort insert sort guard, reverse num:69307197805, time used:0.060000 usage: resident:7.828 MB
+success: merge sort insert sort non guard, reverse num:69307197805, time used:0.060000 usage: resident:7.828 MB
+
+
+card_num:3125000
+success: merge sort non guard, reverse num:1732885163231, time used:0.590000 usage: resident:36.438 MB
+success: merge sort guard, reverse num:1732885163231, time used:0.580000 usage: resident:36.438 MB
+success: merge sort insert sort guard, reverse num:1732885163231, time used:0.410000 usage: resident:36.438 MB
+success: merge sort insert sort non guard, reverse num:1732885163231, time used:0.410000 usage: resident:36.438 MB
+
+
+card_num:15625000
+success: merge sort non guard, reverse num:43311429232265, time used:3.190000 usage: resident:179.500 MB
+success: merge sort guard, reverse num:43311429232265, time used:3.170000 usage: resident:179.500 MB
+success: merge sort insert sort guard, reverse num:43311429232265, time used:2.300000 usage: resident:179.500 MB
+success: merge sort insert sort non guard, reverse num:43311429232265, time used:2.300000 usage: resident:179.500 MB
+
+
+card_num:78125000
+success: merge sort non guard, reverse num:1082695222553029, time used:17.180000 usage: resident:894.555 MB
+success: merge sort guard, reverse num:1082695222553029, time used:16.960000 usage: resident:894.555 MB
+success: merge sort insert sort guard, reverse num:1082695222553029, time used:12.570000 usage: resident:894.555 MB
+success: merge sort insert sort non guard, reverse num:1082695222553029, time used:12.690000 usage: resident:894.555 MB
+
+
+card_num:390625000
+success: merge sort non guard, reverse num:27016972376200311, time used:91.440000 usage: resident:4.366 GB
+success: merge sort guard, reverse num:27016972376200311, time used:90.500000 usage: resident:4.366 GB
+success: merge sort insert sort guard, reverse num:27016972376200311, time used:68.720000 usage: resident:4.366 GB
+success: merge sort insert sort non guard, reverse num:27016972376200311, time used:68.950000 usage: resident:4.366 GB
+
+
+process killed by signal, signal num:9
